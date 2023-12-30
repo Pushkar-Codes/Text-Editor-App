@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Text</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <button id="undo"><i class="ri-arrow-go-back-line"> </i>Undo</button>
+      <button id="redo"><i class="ri-arrow-go-forward-line"> </i>Redo</button>
+
+      <div id="text-container">
+        <p class="text">New Text</p>
+      </div>
+    </div>
+
+    <div id="font">
+      <p>Font</p>
+      <!-- <option id="font-option">
+        Poppins <i class="ri-arrow-drop-down-line"></i>
+      </option> -->
+      <select id="font-option" onchange="changeFont()">
+        <option value="Arial, sans-serif">Arial</option>
+        <option value="Times New Roman, serif">Times New Roman</option>
+        <option value="Courier New, monospace">Courier New</option>
+        <option value="Georgia, serif">Georgia</option>
+        <option value="Lucida Sans, serif">Lucida Sans</option>
+        <option value="Gill Sans, serif">Gill Sans</option>
+      </select>
+    </div>
+
+    <div id="font-size">
+      <p>Size</p>
+      <div id="font-size-box">
+        <!-- <p id="active-font-size">16</p> -->
+        <button id="font-up"><i class="ri-add-line"></i></button>
+        <button id="font-down"><i class="ri-subtract-line"></i></button>
+      </div>
+    </div>
+
+    <div id="color">
+      <p>Colour <i class="ri-color-filter-line"></i></p>
+      <input type="color" id="colorPicker" value="#ff0000" onchange="color()" />
+    </div>
+
+    <input type="text" id="input" placeholder="New Text" />
+
+    <script src="app.js"></script>
+  </body>
+</html>
